@@ -21,10 +21,6 @@ const PostSchema = new mongoose.Schema(
         type: Array,
         default: [],
       },
-      bookmarks: {
-        type: Array,
-        default:[],
-      },
       comments: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Comment'

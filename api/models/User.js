@@ -51,9 +51,9 @@ const UserSchema = new mongoose.Schema({
         type:String,
         max:50,
     },
-    relationship:{
-        type:Number,
-        enum:[1,2,3],
+    bookmarks:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Post'
     },
  },
  {timestamps:true}

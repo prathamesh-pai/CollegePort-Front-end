@@ -41,7 +41,8 @@ router.post("/login", async (req, res) => {
 
 //LOGOUT
 router.get('/logout',(req,res) => {
-  res.clearCookie('jwtoken',{ path:'/'});
+  localStorage.removeItem("user")
+  res.redirect("/auth/login")
   res.status(200);
 })
 

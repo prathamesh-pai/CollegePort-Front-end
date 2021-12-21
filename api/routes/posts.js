@@ -128,7 +128,7 @@ res.redirect('/')
 })
 })
 
-router.get('post/:id/comments', async (req,res) => {
+router.get('/:id/comments', async (req,res) => {
   const post = Post.findById(req.params.id);
   post.populate('comments', function (err, post) {
     res.json(post);
